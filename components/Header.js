@@ -1,12 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
-    <View className=" h-[80px] pt-[38px] bg-yellow-500">
+    <View className=" h-[180px] pt-[38px] bg-yellow-500">
       <Text className="font-bold  text-center text-[#fff] text-[20px]">
         My Todos
       </Text>
+
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate("Details")}
+      />
     </View>
   );
 }
