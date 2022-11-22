@@ -1,12 +1,12 @@
 // In App.js in a new project
 
 import * as React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./screens/Home";
-import Details from "./screens/Details";
 import Header from "./components/Header";
+import Details from "./screens/Details";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,6 @@ function App() {
       <Header />
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
